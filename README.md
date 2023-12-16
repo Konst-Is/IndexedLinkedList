@@ -38,8 +38,8 @@ size // number of nodes in the list
 isEmpty // returns true if the list is empty and false otherwise
 description // forms a string describing all items in the list and the links between them
 init() //  initializer that creates an empty list. When calling this initializer,
-// you must pass to it a generic parameter
-// of the type of list items, e.g.: var myLL = IndexedLinkedList<String>()
+// you must pass to it a generic parameter of the type of list items,
+// e.g.: var myLL = IndexedLinkedList<String>()
 init(head: Node<Element>) // an initializer that creates a list from a single node
 subscript (index: Int) -> Node<Element>? // returns an optional list item by index
 addNode(node: Node<Element>) // method that adds a new node to the end of the list
