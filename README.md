@@ -22,13 +22,13 @@ The solution to this problem is IndexedLinkedList - an implementation of LinkedL
 ### API
 
 ```swift
-public class Node<Element: CustomStringConvertible>
+// public class Node<Element: CustomStringConvertible>
 
 data  // data of any type implementing the CustomStringConvertible protocol
 init(data: Element) // an initialiser that creates a node with data of any type implementing the CustonStringConvertible protocol
 
 
-public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible
+// public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible
 
 lastIndex // index of the last node in the list, optional
 head //  first node in the list, optional
@@ -36,7 +36,8 @@ tail // last node in the list, optional
 size // number of nodes in the list
 isEmpty // returns true if the list is empty and false otherwise
 description // forms a string describing all items in the list and the links between them
-init() //  initializer that creates an empty list. When calling this initializer, you must pass to it a generic parameter of the type of list items, e.g.: var myLL = IndexedLinkedList<String>()
+init() //  initializer that creates an empty list. When calling this initializer, you must pass to it a generic parameter
+// of the type of list items, e.g.: var myLL = IndexedLinkedList<String>()
 init(head: Node<Element>) // an initializer that creates a list from a single node
 subscript (index: Int) -> Node<Element>? // returns an optional list item by index
 addNode(node: Node<Element>) // method that adds a new node to the end of the list
@@ -57,7 +58,8 @@ import Foundation
 
 // Example 1
 
-let myLL = IndexedLinkedList<Int>() // When creating an empty IndexedLinkedList, you need to pass a generic parameter to the type of items it will store.
+let myLL = IndexedLinkedList<Int>() // When creating an empty IndexedLinkedList,
+//you need to pass a generic parameter to the type of items it will store.
         
 print(myLL.lastIndex ?? "nil") // nil
 print(myLL.isEmpty) // true
