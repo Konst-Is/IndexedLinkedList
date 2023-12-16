@@ -99,14 +99,6 @@ print(myLL.description) // nil
        
 // Example 2
 
-extension Array where Element: CustomStringConvertible {
-
-    var description: String {
-        return self.reduce("") { $0 + $1.description }
-    }
-
-}
-
 var array = ["one", "two ", "three"]
 
 let anotherLL = IndexedLinkedList(head: Node(data: array))
