@@ -107,6 +107,7 @@ anotherLL.addNode(node: Node(data: ["four", "five", "six"]))
 
 print(anotherLL.description) // ["one", "two ", "three"] -> ["four", "five", "six"] -> nil
 print(anotherLL[0]?.data ?? "nil") // ["one", "two ", "three"]
+print(anotherLL[1]?.data[1] ?? "nil") // five
 ```
 
 
