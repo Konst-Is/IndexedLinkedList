@@ -45,6 +45,15 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
         }
         return pointers[index]
     }
+    
+    public init() {}
+    
+    public convenience init(head: Node<Element>? = nil) {
+        self.init()
+        if let head = head {
+            self.addNode(node: head)
+        }
+    }
 
     public func addNode(node: Node<Element>) {
         guard lastIndex != nil else {
