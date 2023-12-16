@@ -22,13 +22,13 @@ The solution to this problem is IndexedLinkedList - an implementation of LinkedL
 ### API
 
 ```swift
-public class Node<Element: CustomStringConvertible>
+// public class Node<Element: CustomStringConvertible>
 
 data  // data of any type implementing the CustomStringConvertible protocol
 init(data: Element) // an initializer that creates a node with data of any type implementing the CustonStringConvertible protocol
 
 
-public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible
+// public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible
 
 lastIndex // index of the last node in the list, optional
 head //  first node in the list, optional
