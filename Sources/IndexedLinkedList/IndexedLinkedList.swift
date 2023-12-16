@@ -48,11 +48,9 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
     
     public init() {}
     
-    public convenience init(head: Node<Element>? = nil) {
+    public convenience init(head: Node<Element>) {
         self.init()
-        if let head = head {
-            self.addNode(node: head)
-        }
+        self.addNode(node: head)
     }
 
     public func addNode(node: Node<Element>) {
