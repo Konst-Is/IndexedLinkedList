@@ -1,5 +1,5 @@
 public class Node<Element: CustomStringConvertible> {
-    var data: Element
+    public var data: Element
     var next: Node?
 
     public init(data: Element) {
@@ -85,3 +85,5 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
     }
 
 }
+
+
