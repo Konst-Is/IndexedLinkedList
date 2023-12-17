@@ -39,7 +39,7 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
             return  str + " -> " + "nil"
     }
 
-    public subscript (index: Int) -> Node<Element>? {
+    public subscript(index: Int) -> Node<Element>? {
         guard let lastIndex = lastIndex, (0...lastIndex).contains(index) else {
             return nil
         }
@@ -65,7 +65,7 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
     }
 
     @discardableResult
-    public func removeLastNode () -> Node<Element>? {
+    public func removeLastNode() -> Node<Element>? {
         guard lastIndex != nil else { return nil }
         var removedNode = tail
         pointers[lastIndex!] = nil
@@ -79,7 +79,7 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
         return removedNode
     }
 
-    public func removeAll () {
+    public func removeAll() {
         lastIndex = nil
         pointers = [:]
     }
