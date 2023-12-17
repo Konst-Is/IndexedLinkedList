@@ -14,8 +14,8 @@ The solution to this problem is IndexedLinkedList - an implementation of LinkedL
 
 ### Limitations
 
-- IndexedLinkedList nodes can contain data of any type that implements the CustomStringConvertible protocol.
-- Adding and removing nodes is possible only at the end of IndexedLinkedList using the addNode() method.
+- IndexedLinkedList nodes can contain data of any type that implements the `CustomStringConvertible` protocol.
+- Adding and removing nodes is possible only at the end of IndexedLinkedList using the `addNode()` and `removeLastNode()` methods.
 - It is impossible to change the order of elements in the list.
 - It is impossible to insert or delete an element except at the end of IndexedLinkedList.
 
@@ -41,11 +41,11 @@ init() //  initializer that creates an empty list. When calling this initializer
 // you must pass to it a generic parameter of the type of list items,
 // e.g.: var myLL = IndexedLinkedList<String>()
 init(head: Node<Element>) // an initializer that creates a list from a single node
-subscript (index: Int) -> Node<Element>? // returns an optional list item by index
+subscript(index: Int) -> Node<Element>? // returns an optional list item by index
 addNode(node: Node<Element>) // method that adds a new node to the end of the list
-removeLastNode () -> Node<Element>? // method that removes the last node
+removeLastNode() -> Node<Element>? // method that removes the last node
 // in the list and returns it if it exists or nil
-removeAll () // method that clears the list completely
+removeAll() // method that clears the list completely
 ```
 
 ### How to integrate IndexedLinkedList into your project
