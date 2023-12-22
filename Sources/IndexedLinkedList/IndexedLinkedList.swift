@@ -39,11 +39,9 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
             return  str + " -> " + "nil"
     }
 
-    public subscript(index: Int) -> Node<Element>? {
-        guard let lastIndex = lastIndex, (0...lastIndex).contains(index) else {
-            return nil
-        }
-        return pointers[index]
+    subscript (index: Int) -> Node<Element> {
+        guard !isEmpty, (0...lastIndex!).contains(index) else { fatalError() }
+            return pointers[index]!
     }
     
     public init() {}
