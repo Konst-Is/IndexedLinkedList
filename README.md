@@ -25,27 +25,26 @@ The solution to this problem is IndexedLinkedList - an implementation of LinkedL
 // public class Node<Element: CustomStringConvertible>
 
 data  // data of any type implementing the CustomStringConvertible protocol
-init(data: Element) // an initializer that creates a node with data
-// of any type implementing the CustonStringConvertible protocol
+init(data: Element) /* an initializer that creates a node with data
+of any type implementing the CustonStringConvertible protocol */
 
 
 // public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible
 
-lastIndex // index of the last node in the list, optional
-head //  first node in the list, optional
-tail // last node in the list, optional
-size // number of nodes in the list
-isEmpty // returns true if the list is empty and false otherwise
-description // forms a string describing all items in the list and the links between them
-init() //  initializer that creates an empty list. When calling this initializer,
-// you must pass to it a generic parameter of the type of list items,
-// e.g.: var myLL = IndexedLinkedList<String>()
-init(head: Node<Element>) // an initializer that creates a list from a single node
-subscript(index: Int) -> Node<Element>? // returns an optional list item by index
-addNode(node: Node<Element>) // method that adds a new node to the end of the list
-removeLastNode() -> Node<Element>? // method that removes the last node
-// in the list and returns it if it exists or nil
-removeAll() // method that clears the list completely
+lastIndex // optional index of the last node in the list.
+head //  optional first node in the list.
+tail // optional last node in the list.
+size // number of nodes in the list.
+isEmpty // returns true if the list is empty and false otherwise.
+description // forms a string describing all items in the list and the links between them.
+init() /*  initializer that creates an empty list. When calling this initializer,
+you must pass to it a generic parameter of the type of list items. */
+init(head: Node<Element>) // an initializer that creates a list from a single node.
+subscript(index: Int) -> Node<Element>? // returns an optional list item by index.
+addNode(node: Node<Element>) // method that adds a new node to the end of the list.
+removeLastNode() -> Node<Element>? /* method that removes the last node in the list
+and returns it if it exists or nil. */
+removeAll() // method that completely clears the list.
 ```
 
 ### How to integrate IndexedLinkedList into your project
