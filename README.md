@@ -63,8 +63,8 @@ import Foundation
 
 // Example 1
 
-let myLL = IndexedLinkedList<Int>() // When creating an empty IndexedLinkedList,
-//you need to pass a generic parameter to the type of items it will store.
+let myLL = IndexedLinkedList<Int>() /* When creating an empty IndexedLinkedList,
+you need to pass a generic parameter to the type of items it will store. */
         
 print(myLL.lastIndex ?? "nil") // nil
 print(myLL.isEmpty) // true
