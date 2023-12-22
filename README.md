@@ -39,7 +39,8 @@ isEmpty // returns true if the list is empty and false otherwise.
 description // forms a string describing all items in the list and the links between them.
 init() /*  initializer that creates an empty list. When calling this initializer,
 you must pass to it a generic parameter of the type of list items. */
-init(head: Node<Element>) // an initializer that creates a list from a single node.
+init(head: Node<Element>) /* an initializer that creates a list from a single node.
+When calling it, the generic parameter of items type can be omitted explicitly. */
 subscript(index: Int) -> Node<Element>? // returns an optional list item by index.
 addNode(node: Node<Element>) // method that adds a new node to the end of the list.
 removeLastNode() -> Node<Element>? /* method that removes the last node in the list
