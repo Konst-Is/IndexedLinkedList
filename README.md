@@ -41,7 +41,10 @@ init() /*  initializer that creates an empty list. When calling this initializer
 you must pass to it a generic parameter of the type of list items. */
 init(head: Node<Element>) /* an initializer that creates a list from a single node.
 When calling it, the generic parameter of items type can be omitted explicitly. */
-subscript(index: Int) -> Node<Element>? // returns an optional list item by index.
+
+subscript(index: Int) -> Node<Element> // returns a node by index. Checking the validity
+of the index, as in Array, is the responsibility of the programmer. If you enter an index
+outside the range (0..<count) or the list is empty, you will get a runtime error. */
 addNode(node: Node<Element>) // method that adds a new node to the end of the list.
 removeLastNode() -> Node<Element>? /* method that removes the last node in the list
 and returns it if it exists or nil. */
@@ -82,12 +85,12 @@ print(myLL.description) // 1 -> 2 -> 3 -> 4 -> nil
 print(myLL.isEmpty) // false
 print(myLL.head?.data ?? "nil") // 1
 print(myLL.tail?.data ?? "nil") // 4
-print(myLL[0]?.data ?? "nil") // 1
+print(myLL[0].data) // 1
 print(myLL.size) // 4
 
 let removedNode = myLL.removeLastNode()
 print(removedNode?.data ?? "nil") // 4
-print(myLL[3]?.data ?? "nil") // nil
+print(myLL[3].data) // ERROR
 print(myLL.description) // 1 -> 2 -> 3 -> nil
 
 myLL.removeLastNode()
@@ -109,8 +112,8 @@ let anotherLL = IndexedLinkedList(head: Node(data: array))
 anotherLL.addNode(node: Node(data: ["four", "five", "six"]))
 
 print(anotherLL.description) // ["one", "two ", "three"] -> ["four", "five", "six"] -> nil
-print(anotherLL[0]?.data ?? "nil") // ["one", "two ", "three"]
-print(anotherLL[1]?.data[1] ?? "nil") // five
+print(anotherLL[0].data) // ["one", "two ", "three"]
+print(anotherLL[1].data[1]) // five
 ```
 
 
