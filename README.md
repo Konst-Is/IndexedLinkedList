@@ -43,7 +43,7 @@ init(head: Node<Element>) /* an initializer that creates a list from a single no
 When calling it, the generic parameter of items type can be omitted explicitly. */
 subscript(index: Int) -> Node<Element> /* returns a node by index. Checking the validity
 of the index, as in Array, is the responsibility of the programmer. If you enter an index
-outside the range (0..<count) or the list is empty, you will get a runtime error. */
+outside the range (0..<size) or the list is empty, you will get a runtime error. */
 addNode(node: Node<Element>) // method that adds a new node to the end of the list.
 removeLastNode() -> Node<Element>? /* method that removes the last node in the list
 and returns it if it exists or nil. */
