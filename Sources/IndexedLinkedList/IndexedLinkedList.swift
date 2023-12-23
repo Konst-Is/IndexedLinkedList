@@ -39,7 +39,7 @@ public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringCo
             return  str + " -> " + "nil"
     }
 
-    subscript (index: Int) -> Node<Element> {
+    public subscript (index: Int) -> Node<Element> {
         guard !isEmpty, (0...lastIndex!).contains(index) else { fatalError() }
             return pointers[index]!
     }
