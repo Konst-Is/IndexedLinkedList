@@ -52,7 +52,7 @@ removeAll() // method that completely clears the list.
 
 ### How to integrate IndexedLinkedList into your project
 
-- Open your project in XCode, in the project settings open the Package Dependencies tab, click +, paste the link "https://github.com/Konst-Is/IndexedLinkedList.git" into the search box and click "Add Package".
+- Open your project in XCode, in the project settings open the Package Dependencies tab, click + , paste the link "https://github.com/Konst-Is/IndexedLinkedList.git" into the search box and click "Add Package".
 - In the file where you will use IndexedLinkedList, add "import IndexedLinkedList".
 
 ### Examples of work
