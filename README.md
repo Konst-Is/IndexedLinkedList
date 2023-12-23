@@ -1,4 +1,4 @@
-# IndexedLinkedList is an implementation of Linked List with a Hash Table
+# IndexedLinkedList is an implementation of Linked List with a subscript
 
 Linked List is a dynamic data structure, an ordered sequence of data units (nodes) that are stored in different areas of memory and connected by links. 
 It has many advantages, but also a serious disadvantage that limits its widespread use. It is a slow access to an element - O(N) complexity compared to O(1) for Array and Dictionary.
