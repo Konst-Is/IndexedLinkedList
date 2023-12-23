@@ -70,16 +70,16 @@ print(myLL.lastIndex ?? "nil") // nil
 print(myLL.isEmpty) // true
 
 myLL.addNode(node: Node(data: 1))
-print(myLL.description) // 1 -> nil
+print(myLL) // 1 -> nil
 
 myLL.addNode(node: Node(data: 2))
-print(myLL.description) // 1 -> 2 -> nil
+print(myLL) // 1 -> 2 -> nil
 
 myLL.addNode(node: Node(data: 3))
-print(myLL.description) // 1 -> 2 -> 3 -> nil
+print(myLL) // 1 -> 2 -> 3 -> nil
 
 myLL.addNode(node: Node(data: 4))
-print(myLL.description) // 1 -> 2 -> 3 -> 4 -> nil
+print(myLL) // 1 -> 2 -> 3 -> 4 -> nil
 
 print(myLL.isEmpty) // false
 print(myLL.head?.data ?? "nil") // 1
@@ -90,16 +90,16 @@ print(myLL.size) // 4
 let removedNode = myLL.removeLastNode()
 print(removedNode?.data ?? "nil") // 4
 print(myLL[3].data) // ERROR
-print(myLL.description) // 1 -> 2 -> 3 -> nil
+print(myLL) // 1 -> 2 -> 3 -> nil
 
 myLL.removeLastNode()
-print(myLL.description) // 1 -> 2 -> nil
+print(myLL) // 1 -> 2 -> nil
 
 myLL.removeLastNode()
-print(myLL.description) // 1 -> nil
+print(myLL) // 1 -> nil
 
 myLL.removeLastNode()
-print(myLL.description) // nil
+print(myLL) // nil
 
        
 // Example 2
@@ -110,7 +110,7 @@ let anotherLL = IndexedLinkedList(head: Node(data: array))
 
 anotherLL.addNode(node: Node(data: ["four", "five", "six"]))
 
-print(anotherLL.description) // ["one", "two ", "three"] -> ["four", "five", "six"] -> nil
+print(anotherLL) // ["one", "two ", "three"] -> ["four", "five", "six"] -> nil
 print(anotherLL[0].data) // ["one", "two ", "three"]
 print(anotherLL[1].data[1]) // five
 ```
