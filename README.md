@@ -85,6 +85,7 @@ print(myLL.isEmpty) // false
 print(myLL.head?.data ?? "nil") // 1
 print(myLL.tail?.data ?? "nil") // 4
 print(myLL[0].data) // 1
+print(myLL[1].next?.data ?? "nil") // 3
 print(myLL.size) // 4
 
 let removedNode = myLL.removeLastNode()
