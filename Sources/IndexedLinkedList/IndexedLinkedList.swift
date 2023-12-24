@@ -1,6 +1,6 @@
 public class Node<Element: CustomStringConvertible> {
     public var data: Element
-    var next: Node?
+    public var next: Node?
 
     public init(data: Element) {
         self.data = data
