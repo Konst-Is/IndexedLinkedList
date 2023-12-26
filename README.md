@@ -24,9 +24,12 @@ The solution to this problem is IndexedLinkedList - an implementation of LinkedL
 ```swift
 public class Node<Element: CustomStringConvertible> {}
 
-data  // data of any type implementing the CustomStringConvertible protocol
+data  // data of any type implementing the CustomStringConvertible protocol.
+
+next // optional link to the following node.
+
 init(data: Element) /* an initializer that creates a node with data
-of any type implementing the CustonStringConvertible protocol */
+of any type implementing the CustonStringConvertible protocol. */
 
 
 public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible {}
