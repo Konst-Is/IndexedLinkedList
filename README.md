@@ -53,9 +53,10 @@ initializer, you must pass to it a generic parameter of the type of list items. 
 init(head: Node<Element>) /* an initializer that creates a list from a single node.
 When calling it, the generic parameter of items type can be omitted explicitly. */
 
-subscript(index: Int) -> Node<Element> /* returns a node by index. Checking the validity
-of the index, as in Array, is the responsibility of the programmer. If you enter an index
-outside the range (0..<size) or the list is empty, you will get a runtime error. */
+subscript(index: Int) -> Node<Element> /* returns a node by index. Checking
+the validity of the index, as in Array, is the responsibility of the programmer.
+If you enter an index outside the range (0..<size) or the list is empty, you will 
+get a runtime error. */
 
 addNode(node: Node<Element>) // method that adds a new node to the end of the list.
 
