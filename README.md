@@ -32,21 +32,32 @@ of any type implementing the CustonStringConvertible protocol */
 public class IndexedLinkedList<Element: CustomStringConvertible>: CustomStringConvertible {}
 
 lastIndex // optional index of the last node in the list.
+
 head //  optional first node in the list.
+
 tail // optional last node in the list.
+
 size // number of nodes in the list.
+
 isEmpty // returns true if the list is empty and false otherwise.
+
 description // forms a string describing all items in the list and the links between them.
+
 init() /*  initializer that creates an empty list. When calling this initializer,
 you must pass to it a generic parameter of the type of list items. */
+
 init(head: Node<Element>) /* an initializer that creates a list from a single node.
 When calling it, the generic parameter of items type can be omitted explicitly. */
+
 subscript(index: Int) -> Node<Element> /* returns a node by index. Checking the validity
 of the index, as in Array, is the responsibility of the programmer. If you enter an index
 outside the range (0..<size) or the list is empty, you will get a runtime error. */
+
 addNode(node: Node<Element>) // method that adds a new node to the end of the list.
+
 removeLastNode() -> Node<Element>? /* method that removes the last node in the list
 and returns it if it exists or nil. */
+
 removeAll() // method that completely clears the list.
 ```
 
